@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Exitoso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>¡Gracias por tu compra!</h1>
+        <nav>
+            <a href="{{ url_for('mostrar_productos') }}">Volver a la tienda</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Tu pago ha sido procesado con éxito</h2>
+        <p>Gracias por comprar en nuestra tienda. Esperamos verte pronto de nuevo.</p>
+    </div>
+</body>
+</html>

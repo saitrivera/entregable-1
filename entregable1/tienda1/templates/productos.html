@@ -1,0 +1,25 @@
+<!-- templates/productos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/productos.css') }}">
+</head>
+<body>
+    <h1>Productos</h1>
+    <div class="productos-container">
+        {% for producto in productos %}
+        <div class="producto-card">
+            <img src="{{ url_for('static', filename='images/' + producto.imagen) }}" alt="{{ producto.nombre }}" class="producto-imagen">
+            <div class="producto-info">
+                <h2 class="producto-nombre">{{ producto.nombre }}</h2>
+                <p class="producto-descripcion">{{ producto.descripcion }}</p>
+                <p class="producto-precio">Precio: ${{ producto.precio }}</p>
+                <a href="{{ url_for('agregar_al_carrito', producto_id=producto.id) }}" class="btn-agregar">Agregar al carrito</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+        <nav>
+            <a href="{{ url_for('mostrar_productos') }}">Ver Productos</a>
+        </nav>
+    </header>
+
+    <div class="container carrito">
+        <ul>
+            {% for item in carrito %}
+                <li>{{ item.nombre }} - ${{ item.precio }}</li>
+            {% endfor %}
+        </ul>
+        <p class="total">Total: ${{ total }}</p>
+        <form action="{{ url_for('pago') }}" method="post">
+            <button type="submit">Proceder al Pago</button>
+        </form>
+    </div>
+</body>
+</html>

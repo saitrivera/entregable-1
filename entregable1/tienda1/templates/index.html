@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bienvenido/a a nuestra Tienda Virtual</h1>
+            <nav>
+                {% if 'usuario' in session %}
+                    <a href="{{ url_for('logout') }}" class="nav-link">Cerrar Sesión</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="nav-link">Iniciar Sesión</a>
+                {% endif %}
+                <a href="{{ url_for('mostrar_productos') }}" class="nav-link">Ver Productos</a>
+                <a href="{{ url_for('ver_carrito') }}" class="nav-link">Ver Carrito</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Encuentra lo Mejor para Ti</h2>
+            <p>Explora nuestra tienda y descubre ofertas exclusivas en productos de calidad.</p>
+            <a href="{{ url_for('mostrar_productos') }}" class="btn-primary">Explorar Productos</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="features">
+            <h2>¿Por Qué Elegirnos?</h2>
+            <div class="feature-items">
+                <div class="feature-item">
+                    <h3>Calidad Garantizada</h3>
+                    <p>Productos de alta calidad y garantía.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Envío Rápido</h3>
+                    <p>Envío rápido y seguro a tu domicilio.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Soporte 24/7</h3>
+                    <p>Atención al cliente disponible las 24 horas.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

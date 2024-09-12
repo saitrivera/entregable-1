@@ -1,0 +1,121 @@
+/* Reset CSS para eliminar márgenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos generales */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* Cabecera y navegación */
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #18bc9c;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tarjetas de productos */
+.producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    color: #7f8c8d;
+}
+
+.producto a {
+    background-color: #18bc9c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.producto a:hover {
+    background-color: #1abc9c;
+}
+
+/* Estilos del carrito */
+.carrito {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.carrito h2 {
+    color: #34495e;
+}
+
+.carrito li {
+    margin-bottom: 10px;
+}
+
+.carrito .total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Botón de pago */
+button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c0392b;
+}

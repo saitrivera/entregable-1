@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pago</title>
+</head>
+<body>
+    <h1>Página de Pago</h1>
+    {% if mensaje %}
+        <p>{{ mensaje }}</p>
+    {% else %}
+        <form action="{{ url_for('pago') }}" method="post">
+            <button type="submit">Realizar Pago</button>
+        </form>
+    {% endif %}
+</body>
+</html>
